@@ -55,7 +55,7 @@ const Blog = (props) => {
 
 export async function getStaticProps(context) {
   let data = await fs.promises.readdir("blogdata");
-  let allCount = data.length;
+  // let allCount = data.length;
   let myfile;
   let allBlogs = [];
   for (let index = 0; index < 2; index++) {
@@ -67,7 +67,7 @@ export async function getStaticProps(context) {
   }
 
   return {
-    props: { allBlogs, allCount }, // will be passed to the page component as props
+    props: { allBlogs }, // will be passed to the page component as props
   };
 }
 
